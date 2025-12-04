@@ -1,0 +1,85 @@
+🗣️ Core Meeting Clarity Agent: Multimodal Communication Analyzer
+
+Timeline: 5-Day Placement Project | Focus: LLM Structured Output & Agentic Workflow | Status: Complete (MVP)
+
+This project delivers a specialized AI agent designed to objectively measure and improve communication clarity in professional video meetings. By integrating high-fidelity ASR (Automatic Speech Recognition) with Large Language Model (LLM) semantic analysis, the agent provides a quantifiable metric—the Meeting Clarity Index—to flag ambiguous language and excessive jargon.
+
+✨ Key Features & Unique Contributions
+
+This project moved beyond a standard tutorial by implementing advanced, real-world features:
+
+Weighted Clarity Index (Scoring Logic): Calculates a nuanced score (0-100). The LLM assigns a penalty weight ($0.0 - 1.0$) to each jargon term based on its ambiguity, ensuring highly abstract buzzwords (synergy) are penalized more than common technical terms (Q4 goals).
+
+Per-Speaker Contribution Analysis: Uses ASR Speaker Diarization data to track which individual speaker contributed the most jargon, enabling targeted communication coaching.
+
+Structured Output & Auditing: The Gemini API is forced via a Pydantic schema to return a clean, machine-readable JSON report of jargon, weights, and critiques.
+
+Highlighting & Review: Visually pinpoints every identified jargon term in the full transcript on the Streamlit dashboard.
+
+⚙️ Project Architecture and Technical Flow
+
+The application executes a robust, three-stage pipeline  triggered by a video file upload:
+
+Ingestion & Pre-processing (Python/MoviePy): Handles video extraction, duration validation, and ensures FFmpeg access via absolute path configuration.
+
+ASR Layer (AssemblyAI): Transcribes audio and provides Speaker Diarization (identifying Speaker A, B, etc.).
+
+LLM Semantic Analysis (Gemini/Mistral): Executes the core reasoning task. This layer supports switching between the high-reliability Cloud (Gemini) API and the low-cost Local (Ollama RAG) implementation, which grounds its analysis in the custom jargon_master_list.csv dataset.
+
+Presentation (Streamlit): Synthesizes the results into a user-friendly dashboard with charts and color-coded metrics.
+
+🚀 Setup and Installation
+
+Prerequisites
+
+Python 3.9+ (with venv activated)
+
+FFmpeg: The executable must be installed and accessible via the path configured in src/utils.py.
+
+API Keys: Keys for AssemblyAI and Gemini set in the .env file. (Ollama requires the local server to be running instead of the Gemini Key.)
+
+Steps
+
+Clone the Repository (or ensure files are up-to-date).
+
+Install Dependencies: (Ensure your venv is active)
+
+pip install streamlit moviepy assemblyai google-genai pandas python-dotenv pydantic tabulate ollama
+
+
+Run the Application:
+
+streamlit run app.py
+
+
+🎤 Presentation Talking Points
+
+The presentation should be focused, professional, and emphasize your unique contributions:
+
+Topic
+
+Key Talking Points (Focus on Action)
+
+The Problem
+
+Ambiguous language (jargon) is a costly enterprise problem, not just a nuisance. It kills efficiency and causes project misinterpretation.
+
+The Solution
+
+The Agent provides an objective, quantifiable metric (the Clarity Index) to measure communication quality.
+
+Technical Depth (The Core)
+
+I built a multimodal pipeline (ASR + LLM) that bypasses traditional NLP by using LLM's zero-shot reasoning for semantic analysis.
+
+Unique Feature: Scoring
+
+We use a Weighted Penalty System (0.0 to 1.0) assigned by the LLM to penalize severity, not just count, jargon words.
+
+Unique Feature: Coaching
+
+The Per-Speaker Contribution Chart transforms data into actionable HR/coaching feedback, identifying who needs the most clarity training.
+
+Scalability
+
+The app supports switching to a low-cost, internal Ollama (local RAG) engine, proving the architecture is ready for enterprise deployment and cost-optimization.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <rect x="40" y="40" width="880" height="460" fill="#f6f9fc" stroke="#e2e8f0" rx="6"/>
+  <text x="60" y="80" font-family="Segoe UI, Arial" font-size="20" fill="#0f172a">Transcript Placeholder</text>
+  <text x="60" y="120" font-family="Segoe UI, Arial" font-size="14" fill="#334155">[00:00:12] Speaker A: We should align on Q4 goals and synergies...</text>
+  <text x="60" y="150" font-family="Segoe UI, Arial" font-size="14" fill="#334155">[00:00:20] Speaker B: The RAG approach will help with grounding...</text>
+  <text x="60" y="420" font-family="Segoe UI, Arial" font-size="12" fill="#94a3b8">Highlighted jargon terms would be colored and linked to critiques.</text>
+</svg>

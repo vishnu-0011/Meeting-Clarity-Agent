@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect x="40" y="40" width="880" height="120" fill="#111827" rx="8"/>
+  <rect x="40" y="180" width="420" height="300" fill="#0b1220" rx="8"/>
+  <rect x="500" y="180" width="420" height="140" fill="#071021" rx="8"/>
+  <rect x="500" y="340" width="420" height="140" fill="#071021" rx="8"/>
+  <text x="480" y="110" font-family="Arial" font-size="24" fill="#e6eef8" text-anchor="middle">Dashboard Placeholder</text>
+  <text x="250" y="330" font-family="Arial" font-size="18" fill="#9fb4d8" text-anchor="middle">Transcript & Highlights</text>
+  <text x="710" y="250" font-family="Arial" font-size="18" fill="#9fb4d8" text-anchor="middle">Clarity Index</text>
+  <text x="710" y="410" font-family="Arial" font-size="18" fill="#9fb4d8" text-anchor="middle">Per-Speaker Chart</text>
+</svg>

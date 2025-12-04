@@ -1,0 +1,14 @@
+streamlit 
+moviepy 
+assemblyai 
+google-genai 
+pandas 
+python-dotenv
+ollama
+pydantic
+pymongo[srv]
+plotly
+altair
+uvicorn
+fastapi
+python-multipart
